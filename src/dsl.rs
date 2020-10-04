@@ -23,6 +23,10 @@ pub fn contain_all<T: Debug + Clone>(rhs: &[T]) -> Box<ContainsAll<T>> {
     Box::new(ContainsAll(rhs))
 }
 
+pub fn contain_exactly<T: Debug + Clone>(rhs: &[T]) -> Box<ContainsExactly<T>> {
+    Box::new(ContainsExactly(rhs))
+}
+
 pub fn contain_only<T: Debug>(rhs: T) -> Box<ContainsOnly<T>> {
     Box::new(ContainsOnly(rhs))
 }
