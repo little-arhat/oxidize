@@ -19,6 +19,10 @@ pub fn contain<T: Debug>(rhs: T) -> Box<Contains<T>> {
     Box::new(Contains(rhs))
 }
 
+pub fn contain_only<T: Debug>(rhs: T) -> Box<ContainsOnly<T>> {
+    Box::new(ContainsOnly(rhs))
+}
+
 pub fn greater_than<T: Debug>(rhs: T) -> Box<GreaterThan<T>> {
     Box::new(GreaterThan(rhs))
 }
