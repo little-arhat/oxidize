@@ -19,6 +19,10 @@ pub fn contain<T: Debug>(rhs: T) -> Box<Contains<T>> {
     Box::new(Contains(rhs))
 }
 
+pub fn contain_all<T: Debug + Clone>(rhs: &[T]) -> Box<ContainsAll<T>> {
+    Box::new(ContainsAll(rhs))
+}
+
 pub fn contain_only<T: Debug>(rhs: T) -> Box<ContainsOnly<T>> {
     Box::new(ContainsOnly(rhs))
 }
